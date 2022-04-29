@@ -52,8 +52,6 @@ The module creates the following resources
 
 In order allow the Shield Custom AWS Config Rule detect a resource which you want to always have Automatic application layer DDoS mitigation enabled you must add the tag key `EnableShieldAutomaticMitigation` to the resource and set its value to `true`. 
 
-You can enable this for any stack by setting the parameter `enable_shield_advanced_automatic_mitigation = true` in the `main.tf`
-
 ### Things to note when making changes
 
 The `shield-custom-aws-config-remediation` lambda function which is named `lambda_function.py` requires the latest boto3 dependencies in order to run successful, because of this fact the dependencies are added to the `shield-custom-aws-config-remediation.zip` file which is deployed to the lambda function.
