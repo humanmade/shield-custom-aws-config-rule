@@ -2,7 +2,7 @@
 
 This module creates a custom AWS config rule which ensures eligible Shield Protection resources will always have the Automatic application layer DDoS mitigation enabled.
 
-**Note** This repository is not going to be maintained! It's purpose is to share the remediation technique used due to a [bug](https://github.com/hashicorp/terraform-provider-aws/issues/22869) in terraform-provider-aws
+**Note** This repository is **NOT MAINTAINED**! It's purpose is to share the remediation technique used due to a [bug](https://github.com/hashicorp/terraform-provider-aws/issues/22869) in terraform-provider-aws
 
 ### How it works
 
@@ -46,7 +46,6 @@ The module creates the following resources
   - This function is used only for resource remediation.
   - The lambda function is invoked by the SSM document `shield-automitigation-enabled-remediation` and passes the `ResourceID` of the `NON_COMPLIANT`Shield Protection resource as an input.
   - The lambda function then uses the resource ID to retrieve the ARN of the resource via AWS boto3 SDK  and finally uses the ARN to set `ApplicationLayerAutomaticResponse` to `ENABLED` for the resource
-
 
 
 ### Requirements
