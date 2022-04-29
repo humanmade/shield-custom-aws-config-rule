@@ -2,6 +2,7 @@
 
 This module creates a custom AWS config rule which ensures eligible Shield Protection resources will always have the Automatic application layer DDoS mitigation enabled.
 
+**Note** This repository is not going to be maintained! It's purpose is to share the remediation technique used due to a [bug](https://github.com/hashicorp/terraform-provider-aws/issues/22869) in terraform-provider-aws
 
 ### How it works
 
